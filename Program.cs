@@ -11,3 +11,13 @@ int Prompt(string message) // ввод числа с клавиатуры
     return number;
 }
 
+string[] CreateArray(int len) // создание нового массива
+{
+    string[] array = new string[len];
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.Write($"Введите {i+1}-й элемент массива: ");
+        array[i] = Console.ReadLine();
+    }
+    return array;
+}
