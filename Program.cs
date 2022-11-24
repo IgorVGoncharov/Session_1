@@ -21,3 +21,19 @@ string[] CreateArray(int len) // создание нового массива
     }
     return array;
 }
+
+string[] LimitedValueLengthArray(string[] array) //создание нового массива по условиям задачи
+{
+    string[] newarray = new string[0];
+    int value = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            Array.Resize(ref newarray, value + 1);
+            newarray[value] = array[i];
+            value += 1;
+        }
+    }
+    return newarray;
+}
