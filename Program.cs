@@ -48,3 +48,11 @@ void PrintArray(string[] arr) // печать массива
     System.Console.Write(']');
     System.Console.WriteLine();
 }
+
+int len = Prompt("Введите размерность массива: ");
+string[] newarray = CreateArray(len);
+System.Console.WriteLine("Исходный массив: ");
+PrintArray(newarray); 
+string[] changedarray = LimitedValueLengthArray(newarray);
+System.Console.WriteLine("Измененный массив: ");
+PrintArray(changedarray);
